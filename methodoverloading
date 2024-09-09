@@ -1,0 +1,42 @@
+package javalab;
+import java.util.Scanner;
+class Calculate
+{
+	void area(double r)
+	{
+		System.out.println("Area of circle="+3.14*r*r);
+	}
+	void area(int length, int breadth)
+	{
+		System.out.println("Area of rectangle="+length*breadth);
+	}
+	void area(double base,double height)
+	{
+		System.out.println("Area of the triangle="+0.5*base*height);
+	}
+}
+
+public class Methodoverloading {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Calculate A= new Calculate();
+		System.out.println("enter the radius of the circle");
+		double r =sc.nextDouble();
+		A.area(r);
+		System.out.println("Enter the radius of length and breadth");
+		int length = sc.nextInt();
+		int breadth=sc.nextInt();
+		A.area(length,breadth);
+		System.out.println("Enter the value of base and height of the triangle");
+		double base = sc.nextDouble();
+		double height=sc.nextDouble();
+		
+		
+		A.area(base,height);
+		
+
+
+	}
+
+}
