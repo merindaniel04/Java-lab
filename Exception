@@ -8,8 +8,8 @@ Scanner sc=new Scanner (System.in);
 char confirmation;
 do
 {
-	System.out.println("Enter you choice");
-	System.out.println("1. Arthmetic operation");
+	System.out.println("Enter your choice");
+	System.out.println("1. Arithmetic operation");
 	System.out.println("2.Array access");
 	int choice =sc.nextInt();
 	switch(choice)
@@ -26,7 +26,7 @@ do
 	 }
 	 catch(ArithmeticException e)
 	 {
-		 System.out.println("Caught an exception"+e.getMessage());
+		 System.out.println("Caught an exception="+e.getMessage());
 	 }
 	 break;
 	 case 2:
