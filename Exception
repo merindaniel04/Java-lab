@@ -1,0 +1,73 @@
+package javalab;
+import java.util.Scanner;
+public class Exceptionn {
+
+	public static void main(String[] args) {
+		
+Scanner sc=new Scanner (System.in);
+char confirmation;
+do
+{
+	System.out.println("Enter you choice");
+	System.out.println("1. Arthmetic operation");
+	System.out.println("2.Array access");
+	int choice =sc.nextInt();
+	switch(choice)
+	{
+	case 1:
+	 try 
+	 {
+		 System.out.println("Enter the divident");
+		 int divident= sc.nextInt();
+		 System.out.println("enter the divisor");
+		 int divisor=sc.nextInt();
+		 int result=divident/divisor;
+		 System.out.println("Result="+result);
+	 }
+	 catch(ArithmeticException e)
+	 {
+		 System.out.println("Caught an exception"+e.getMessage());
+	 }
+	 break;
+	 case 2:
+	 {
+		 try 
+		 {
+			 int array[]= {1,2,3,4};
+		
+			 
+			 System.out.println("Enter the array index which is to be accessed:");
+			 int index=sc.nextInt();
+			 System.out.println("The number in "+index +" is "+array[index]);
+		 } 
+			 catch(ArrayIndexOutOfBoundsException e)
+			 {
+				 System.out.println("caught an exception="+e.getMessage());
+			 }
+		 break;
+	 }
+	default:
+	 {
+		 System.out.println("INVALID INPUT");
+		 break;
+		 
+	 }
+		 }
+	System.out.println("dO YOU WANT TO CONTINUE : type Y or N ");
+
+	confirmation=sc.next().charAt(0);
+
+	}
+
+	while(confirmation=='y' || confirmation=='Y');
+    if(confirmation=='n'|| confirmation=='N')
+    {
+    	System.out.println("exited the program successfully");
+    }
+
+	}
+	
+}
+	
+
+
